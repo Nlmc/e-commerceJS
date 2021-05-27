@@ -24,3 +24,8 @@ h1 {
 .bg-first-color {
     background-color:#08448f;
 } 
+
+.active {
+    display: block;
+    background-attachment: red;
+}
