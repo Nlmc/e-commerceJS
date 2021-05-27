@@ -3,13 +3,7 @@ const basketArticles = [];
 let buttons = document.querySelectorAll('a.addCard');
 
 function addToBasket(item){
-    basketArticles.push({
-        id: item.id,
-        name: item.name,
-        price: item.price,
-        ref: item.ref,
-        quantity: 1
-    });
+    basketArticles.push(item);
 }
 
 buttons.forEach(item => {
@@ -28,11 +22,12 @@ buttons.forEach(item => {
                 id: itemId,
                 name: itemName,
                 price: itemPrice,
-                ref: itemRef
-           };
-    
+                ref: itemRef,
+                quantity: 1
+            };
            addToBasket(newItem);
         }
-       
    })
 })
+
+console.log(products);
