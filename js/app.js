@@ -29,3 +29,13 @@
     blocUkeleles.style.display = "block";
   });
 
+// Add active class to the current button (highlight it)
+var navbarList = document.getElementById("main-menu");
+var navitems = navbarList.getElementsByClassName("list");
+for (var i = 0; i < navitems.length; i++) {
+  navitems[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
