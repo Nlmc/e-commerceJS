@@ -15,10 +15,12 @@ function addToBasket(item){
     basketArticles.push(item);
 }
 
+
+
 // on parcours tout les bouttons acheter pour leur mettre
 // un écouteur d'event
 buttons.forEach(item => {
-   item.addEventListener('click', () => {
+   item.addEventListener('clicks', () => {
        
         let itemId = item.getAttribute('data-id');
 
