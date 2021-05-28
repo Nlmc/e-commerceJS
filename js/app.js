@@ -16,6 +16,10 @@ function addToBasket(item){
 }
 
 
+function removeFromBasket(id){
+    let index = basketArticles.findIndex(x => x.id === id);
+    basketArticles.splice(index, 1);
+}
 
 // on parcours tout les bouttons acheter pour leur mettre
 // un écouteur d'event
