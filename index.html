@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" cogntent="width=device-width, initial-scale=1.0">
-    <meta name="description" content="eMusic, l'expert en guitares, basses">
+    <meta name="description"
+        content="eMusic: expert en guitares, basses, ukulélés et tous les instruments à cordes pincés">
     <meta name="robots" content="INDEX,FOLLOW">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- favicon  -->
     <!-- <link rel="icon" href="assets/img/favicon.gif" sizes="32x32" /> -->
 
@@ -29,62 +28,26 @@
 
 <body>
     <!-- header -->
-    <a href="#">logo</a>
-    <a href="#">guitares</a>
-    <a href="#">basses</a>
-    <a href="#">ukelele</a>
-    <a href="#">panier</a>
-    <!-- <header class="navigation">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container">
-                <a title="Page d'accueil" class="navbar-brand" href="index.html"><img class="logo"
-                        src="assets/img/logo.gif" alt="Logo optique Lamanu"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item p-2">
-                            <a title="Page Lunettes de vue" class="nav-link fs-4"
-                                href="lunettes-de-vue.html">Guitares</a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a title="Page Lunettes de soleil" class="nav-link fs-4"
-                                href="lunettes-de-soleil.html">Basses</a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a title="Page Contact" class="nav-link fs-4" href="contact.html">Ukulélés</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">logo</a></li>
+                <li><a href="#">guitares</a></li>
+                <li><a href="#">basses</a></li>
+                <li><a href="#">ukelele</a></li>
+                <li><a href="#">panier</a></li>
+            </ul>
         </nav>
-    </header> -->
-    <header></header>
-    <hr />
+    </header>
 
     <main class="container">
-
         <section id="guitares">toutes les guitares</section>
         <hr />
-
         <section id="guitares">toutes les basses</section>
         <hr />
-
         <section id="guitares">toutes les ukelélés</section>
         <hr />
-
-        <aside>
-            <div id="items_table">
-                <h3>Shopping List</h3>
-                <table id=list></table>
-                <label>* Delete all items</label>
-                <input type=button value="Vider" onclick="ClearAll()">
-            </div>
-        </aside>
-
-        <!-- == BS Cards + pushJS == -->
+        <!-- == BS Cards + pushJS/json == -->
         <!-- START BS Cards wrapper -->
         <div class="card" id="card-001" style="width: 18rem;">
             <img src="#" class="card-img-top" alt="">
@@ -103,26 +66,18 @@
                 <span>40938746</span>
                 </p>
                 <!-- <button><a href="#" class="btn btn-primary" data-id="001">Ajouter au panier</a></button> -->
-                input <a href="#" class="btn btn-primary addCard" data-id="001">Ajouter au panier</a>
+                <a href="#" class="btn btn-primary addCard" data-id="001">Ajouter au panier</a>
             </div>
             <!-- END Cards BS body -->
         </div>
         <!-- END BS Cards wrapper -->
-        <hr />
-        <div id="cart-wrap">
-            <!-- (B) PRODUCTS LIST -->
-            <div id="cart-products"></div>
-            <!-- (C) CURRENT CART -->
-            <div id="cart-items"></div>
-        </div>
-
     </main>
 
     <footer class=" text-center bg-first-color">
-
         <!-- Grid container -->
     </footer>
-    <!-- JavaScript Bundle with Popper -->
+
+    <!-- JavaScript BS Bundle -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script> -->

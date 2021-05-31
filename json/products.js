@@ -1,6 +1,6 @@
 [
     {
-        "id": "001",
+        "id": 101,
         "img": "dummy-pdt-img.jpg",
         "name": "Monterey Fender Stratocaster",
         "desc": "Cultissime guitare",
@@ -9,7 +9,7 @@
         "price": 2034
     },
     {
-        "id": "002",
+        "id": 102,
         "img": "dummy-pdt-img.jpg",
         "name": "Gibson",
         "desc": "Extraordinaire guitare",
@@ -18,7 +18,7 @@
         "price": 1247
     },
     {
-        "id": "003",
+        "id": 103,
         "img": "dummy-pdt-img.jpg",
         "name": "Jaydee SG",
         "desc": "Balle de guitare",
@@ -27,7 +27,7 @@
         "price": 675
     },
     {
-        "id": "004",
+        "id": 104,
         "img": "dummy-pdt-img.jpg",
         "name": "Fender Telecaster « Micawber »",
         "desc": "Grosse déchire de guitare",
@@ -36,7 +36,7 @@
         "price": 842
     },
     {
-        "id": "101",
+        "id": 201,
         "img": "dummy-pdt-img.jpg",
         "name": "Kim Deal",
         "desc": "Cultissime basse",
@@ -45,7 +45,7 @@
         "price": 2034
     },
     {
-        "id": "102",
+        "id": 202,
         "img": "dummy-pdt-img.jpg",
         "name": "Peter Hook",
         "desc": "Extraordinaire basse",
@@ -54,7 +54,7 @@
         "price": 1247
     },
     {
-        "id": "103",
+        "id": 203,
         "img": "dummy-pdt-img.jpg",
         "name": "Kim Gordon",
         "desc": "Balle de guitare",
@@ -63,7 +63,7 @@
         "price": 675
     },
     {
-        "id": "104",
+        "id": 204,
         "img": "dummy-pdt-img.jpg",
         "name": "Flea »",
         "desc": "Grosse déchire de guitare",
@@ -72,7 +72,7 @@
         "price": 842
     },
     {
-        "id": "201",
+        "id": 301,
         "img": "dummy-pdt-img.jpg",
         "name": "Ledward Kaapana",
         "desc": "Cultissime guitare",
@@ -81,7 +81,7 @@
         "price": 2034
     },
     {
-        "id": "202",
+        "id": 302,
         "img": "dummy-pdt-img.jpg",
         "name": "Elvis Presley",
         "desc": "Extraordinaire guitare",
@@ -90,7 +90,7 @@
         "price": 1247
     },
     {
-        "id": "203",
+        "id": 303,
         "img": "dummy-pdt-img.jpg",
         "name": "Gabby Pahinui",
         "desc": "Balle de guitare",
@@ -99,7 +99,7 @@
         "price": 675
     },
     {
-        "id": "204",
+        "id": 304,
         "img": "dummy-pdt-img.jpg",
         "name": "Fender Telecaster « Micawber »",
         "desc": "Grosse déchire de guitare",
