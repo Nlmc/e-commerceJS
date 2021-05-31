@@ -46,3 +46,17 @@ h1 {
     padding:5px 0;
     text-align: center;
 }
+.btn-pannier {
+    border:1px solid #ddd;
+    padding:2px 10px;
+}
+.btn-pannier:hover, .nav-item:hover {
+    background-color:#08448f;
+    color:#fff;
+}
+ .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .active:hover {
+    color:#fff;background-color:#08448f;
+}
+.active {
+    background-color: #ddd;    
+}
