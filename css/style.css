@@ -66,4 +66,14 @@ table tbody td i {
 .active {
     background-color: #ddd;    
 }
-
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        position:absolute;
+        top:50px; 
+        left:0;
+        width:100%;
+        background-color: #fff;
+        height:165px;
+        text-align: center;
+    }
+} /* end media*/
