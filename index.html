@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" cogntent="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="eMusic: expert en guitares, basses, ukulélés et tous les instruments à cordes pincés">
@@ -23,10 +24,35 @@
     <!-- style du site  -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <title>eMusic</title>
+=======
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" cogntent="width=device-width, initial-scale=1.0">
+    <!-- CSS bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- icons bootstrap  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- CSS fontawesome  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&display=swap" rel="stylesheet">
+    <!-- style du site  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>E Music Magasin d'instruments de musique </title>
+    <meta name="description" content="Acheter instruments &amp; Equipements en ligne &ndash; Boutique spécialisé dans les guitares, basses et ukulélés" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- favicon  -->
+    <link rel="icon" href="assets/img/ico.gif" sizes="32x32" />
+    <!-- js 2 carussels  -->
+>>>>>>> develop
 
 </head>
 
 <body>
+<<<<<<< HEAD
     <!-- header -->
     <header>
         <nav>
@@ -86,4 +112,204 @@
 
 </body>
 
+=======
+
+    <!-- header -->
+    <header class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a title="Page d'accueil" class="navbar-brand" href="index.html"><img class="logo"
+                        src="assets/img/logo.svg" alt="Logo optique Lamanu"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a id="nav-guitares" class="nav-link" href="#"  role="button" aria-expanded="false">Guitares</a>
+                           
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="nav-basses" class="nav-link" href="#" role="button" aria-expanded="false">Basses</a>
+                           
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="nav-ukeleles" class="nav-link" href="#" role="button" aria-expanded="false">Ukélélés</a>
+                           
+                        </li> 
+                        <li class="nav-item dropdown">
+                            <a id="nav-all" class="nav-link" href="#" role="button" aria-expanded="false">Voir tous les produits</a>
+                           
+                        </li>
+                        <li class="nav-item">
+                              <!-- Button trigger modal -->
+                                <a data-bs-toggle="modal" data-bs-target="#pannierModal" class="nav-link" href="#" title="Panier"><i class="bi bi-cart-dash"></i></a>
+                        </li>
+                          
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><!-- end header -->
+
+
+    <!-- main -->
+    <main class="home container-fluid mt-3 mb-3 ">
+        <div class="container-fluid fond-h1">
+            <h1 class="text-white text-center">Les meilleurs instruments de musique sont chez nous</h1>
+        </div>
+        <!-- bloc guitares -->
+        <div id="guitares" class="container-fluid guitares filter">
+            <h2 class="first-color text-center p-3">Les guitares</h2>
+            <div class="container">
+                <div class="row justify-content-start">
+                  <!-- Produit 1 -->
+                  <div class="col-md-4">                                      
+                    <div class="card" >
+                        <img src="assets/img/guitar-01-classique.jpg" class="card-img-top img-fluid" alt="Guitar classique">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary text-center">Ajouter au panier</a> <a href="#" class="btn btn-primary text-center">Acheter</a>
+                        </div>
+                      </div>                   
+                  </div>
+                  <div class="card" id="card-2" style="width: 18rem;">
+                    <img src="assets/img/guitar-02-blanche.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Gibson - explorer</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p><span class="price">3000</span>$</p>
+                        <p>Réf: <span class="ref">388849</span></p>
+                      <a class="btn btn-primary addCard" data-id="002">Ajouter au panier</a>
+                    </div>
+                </div>
+               
+                  <!-- end col + Produit 1 -->
+                  
+                </div>
+            </div>      
+        </div><!-- end bloc guitares -->
+      
+
+        <!-- bloc basses -->
+        <div id="basses" class="container-fluid basses filter">
+            <h2 class="first-color text-center p-3">Les basses</h2>
+            <div class="container">
+                <div class="row justify-content-start">
+                  <!-- Produit 1 -->
+                  <div class="col-md-4">                                      
+                    <div class="card" >
+                        <img src="assets/img/guitar-01-classique.jpg" class="card-img-top img-fluid" alt="Guitar classique">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary text-center">Ajouter au panier</a> <a href="#" class="btn btn-primary text-center">Acheter</a>
+                        </div>
+                      </div>                   
+                  </div><!-- end col + Produit 1 -->
+                  
+                </div>
+            </div>      
+        </div><!-- end bloc basses -->
+
+
+        <!-- bloc ukeleles -->
+        <div id="ukeleles" class="container-fluid ukeleles filter">
+            <h2 class="first-color text-center p-3">Les Ukélélés</h2>
+            <div class="container">
+                <div class="row justify-content-start">
+                  <!-- Produit 1 -->
+                  <div class="col-md-4">                                      
+                    <div class="card" >
+                        <img src="assets/img/guitar-01-classique.jpg" class="card-img-top img-fluid" alt="Guitar classique">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary text-center">Ajouter au panier</a> <a href="#" class="btn btn-primary text-center">Acheter</a>
+                        </div>
+                      </div>                   
+                  </div><!-- end col + Produit 1 -->
+                  
+                </div>
+            </div>      
+        </div><!-- end bloc ukeleles -->
+
+    </main><!-- end main -->
+
+    <!-- Modal panier-->
+    <div class="modal fade" id="pannierModal" tabindex="-1" aria-labelledby="pannierModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="pannierModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group">
+
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div><!-- end pannier dans modal -->
+
+    <footer class=" text-center bg-first-color">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <div class="row">
+                <div class="col-md-6">
+                    <nav class="menu-bottom">
+                        <ul class="list-unstyled mt-3">
+                            <li class="d-md-inline">
+                                <a class="link-light text-decoration-none p-3" href="contact.html">
+                                    Contact</a>
+                            </li>
+                            <li class="d-md-inline">
+                                <a class="link-light text-decoration-none p-3" href="#">
+                                    Mentions légales</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <!-- Section: Social media -->
+                    <section class="mb-4">
+                        <!-- Facebook -->
+                        <a class="btn btn-floating m-1 link-light " href="#" role="button">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="btn btn-floating m-1 link-light " href="#" role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <!-- Linkedin -->
+                        <a class="btn btn-floating m-1 link-light " href="#" role="button">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a class="btn btn-floating m-1 link-light " href="#" role="button">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </section>
+                    <!-- Section: Social media -->
+                </div>
+            </div>
+            <!-- end row-->
+        </div>
+        <!-- Grid container -->
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+</body>
+>>>>>>> develop
 </html>

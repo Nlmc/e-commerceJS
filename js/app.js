@@ -1,50 +1,99 @@
-// function loadFile() {
-//     var fileReader;
+const basketArticles = [];
 
-//     if (typeof window.FileReader !== 'function') {
-//         alert("The file API isn't supported on this browser yet.");
-//         return;
-//     }
-//     else {
-//         fileReader = new FileReader();
-//         fileReader.onload = receivedText;
-//         fileReader.readAsText(file);
-//     }
+let buttons = document.querySelectorAll('a.addCard');
+console.log(buttons);
+buttons.forEach(item => {
+    item.addEventListener('click', () => {
+        
+         let itemId = item.getAttribute('data-id');
+         
+ 
+         if (basketArticles.some(elem => elem.id == itemId)) {
+             let index = basketArticles.findIndex(x => x.id === itemId);
+             basketArticles[index].quantity += 1;
+             console.log('l\'article existe déjà dans le panier');
+         } else {
+             let index = obj.findIndex(x => x.id === itemId);
+             console.log(obj[index]);
+             addToBasket(obj[index]);
+         }
+    })
+ })
 
-//     function receivedText(e) {
-//         let lines = e.target.result;
-//         var newArr = JSON.parse(lines);
-//     }
-// }
-// window.onload = loadFile();
+let url = 'js/products.json';
+let obj = [];
 
+fetch(url)
+    .then(res => res.json())
+    .then(out => obj = out)
+    .then(() => console.log(obj)).catch(err => { throw err });
 
-// const MY_JSON_FILE = [{ "hello": "world" }];
-// let json = JSON.stringify(MY_JSON_FILE);
-// const blob = new Blob([json], { type: "application/json" });
-// const fr = new FileReader();
-// fr.addEventListener("load", e => {
-//     console.log(e.target.result, JSON.parse(fr.result))
-// });
-// fr.readAsText(blob);
-
-function loadJSON(callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'products.json', true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
+function addToBasket(item){
+    item.quantity = 1;
+    basketArticles.push(item);
+    displayBasket();
 }
-function init() {
-    loadJSON(function (response) {
-        // Parse JSON string into object
-        var actual_JSON = JSON.parse(response);
-        console.log(actual_JSON);
+
+function removeFromBasket(id){
+    let index = basketArticles.findIndex(x => x.id === id);
+    basketArticles.splice(index, 1);
+    displayBasket();
+
+}
+
+// fonction qui réaffiche entièrement le panier 
+// appelée dès qu'une modification sur panier est effectuée 
+function displayBasket () {
+    let modal = document.querySelector('.modal-body ul.list-group');
+
+    basketArticles.forEach(item => {
+        let article = document.createElement("LI");
+        let price = document.createElement('SPAN');
+        let ref = document.createElement('P');
+        ref.innerHTML = 'ref: ' + item.ref;
+        price.innerHTML = item.price + '$';
+        article.innerHTML += item.name;
+
+        article.appendChild(ref);
+        article.appendChild(price);
+        article.classList.add('list-group-item');
+        article.classList.add('d-flex');
+        article.classList.add('justify-content-between');
+        
+        modal.appendChild(article)
     });
 }
-window.onload = init();
+
+// on parcours tout les bouttons acheter pour leur mettre
+// un écouteur d'event
+
+// code filter
+  let blocGuitars = document.getElementById('guitares');
+  let blocBasses = document.getElementById("basses");
+  let blocUkeleles = document.getElementById("ukeleles");
+
+  let navGuitars = document.getElementById('nav-guitares');
+  let navBasses = document.getElementById('nav-basses');
+  let navUkeleles = document.getElementById('nav-ukeleles');
+  let navAll = document.getElementById('nav-all');
+  
+  navGuitars.addEventListener('click',function(){
+    blocGuitars.style.display = "block";
+    blocBasses.style.display = "none";
+    blocUkeleles.style.display = "none";
+  });
+  navBasses.addEventListener('click',function(){
+    blocGuitars.style.display = "none";
+    blocBasses.style.display = "block";
+    blocUkeleles.style.display = "none";
+  });
+  navUkeleles.addEventListener('click',function(){
+    blocGuitars.style.display = "none";
+    blocBasses.style.display = "none";
+    blocUkeleles.style.display = "block";
+  });
+  navAll.addEventListener('click',function(){
+    blocGuitars.style.display = "block";
+    blocBasses.style.display = "block";
+    blocUkeleles.style.display = "block";
+  });
