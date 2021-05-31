@@ -1,26 +1,31 @@
-const basketArticles = [];
-let obj = [];
+const basketArticles = []; //Panier
+let obj = []; //Tableau qui contiendra le resultat du json
 let url = 'js/products.json';
 
-let buttons = document.querySelectorAll('a.addCard');
+let buttons = document.querySelectorAll('a.addCard');// boutons ajouter au panier
 
+// on boucle sur les boutons ajouter au panier 
 buttons.forEach(item => {
     item.addEventListener('click', () => {
         
         let itemId = item.getAttribute('data-id');
         
+        // si l'article existe déjà dans le ânier on incrémente la quantité
         if (basketArticles.some(elem => elem.id == itemId)) {
           let index = basketArticles.findIndex(x => x.id === itemId);
           basketArticles[index].quantity += 1;
           displayBasket();
           console.log('l\'article existe déjà dans le panier');
         } else {
+          // sinon on l'ajoute
           let index = obj.findIndex(x => x.id === itemId);
           addToBasket(obj[index]);
         }
     })
 });
 
+// on va chercher le json à l'url indiquée puis on le met 
+// dans la variable obj
 fetch(url)
     .then(res => res.json())
     .then(out => obj = out)
