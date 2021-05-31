@@ -163,11 +163,26 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <ul class="list-group">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Nom du produit</th>
+                          <th>Réference</th>
+                          <th>Quantité</th>  
+                          <th>Prix</th>
+                          <th>Supprimer</th>
+                      </tr>
+                  </thead>
+                  <tbody>
 
-              </ul>
+                  </tbody>
+              </table>
             </div>
             <div class="modal-footer">
+                <div class="row">
+                    Prix total:
+                    <span id="totalPrice"></span>$
+                </div>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button type="button" class="btn btn-primary">Save changes</button>
             </div>

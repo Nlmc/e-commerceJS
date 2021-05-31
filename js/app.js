@@ -5,18 +5,17 @@ console.log(buttons);
 buttons.forEach(item => {
     item.addEventListener('click', () => {
         
-         let itemId = item.getAttribute('data-id');
-         
- 
-         if (basketArticles.some(elem => elem.id == itemId)) {
-             let index = basketArticles.findIndex(x => x.id === itemId);
-             basketArticles[index].quantity += 1;
-             console.log('l\'article existe déjà dans le panier');
-         } else {
-             let index = obj.findIndex(x => x.id === itemId);
-             console.log(obj[index]);
-             addToBasket(obj[index]);
-         }
+        let itemId = item.getAttribute('data-id');
+        
+        if (basketArticles.some(elem => elem.id == itemId)) {
+          let index = basketArticles.findIndex(x => x.id === itemId);
+          basketArticles[index].quantity += 1;
+          displayBasket();
+          console.log('l\'article existe déjà dans le panier');
+        } else {
+          let index = obj.findIndex(x => x.id === itemId);
+          addToBasket(obj[index]);
+        }
     })
  })
 
@@ -35,34 +34,68 @@ function addToBasket(item){
 }
 
 function removeFromBasket(id){
+  console.log('delete');
     let index = basketArticles.findIndex(x => x.id === id);
     basketArticles.splice(index, 1);
-    displayBasket();
-
+    let elem = document.getElementById(id);
+    elem.innerHTML = '';
+    elem.remove();
 }
+
+function calcTotal(){
+  let total = 0;
+  basketArticles.forEach(item => {
+    total += (item.price * item.quantity);
+  })
+  document.getElementById('totalPrice').textContent = total;
+} 
 
 // fonction qui réaffiche entièrement le panier 
 // appelée dès qu'une modification sur panier est effectuée 
 function displayBasket () {
-    let modal = document.querySelector('.modal-body ul.list-group');
+    let tbody = document.querySelector('.modal-body table tbody');
+    tbody.innerHTML = '';
+    console.log('display basket');
 
     basketArticles.forEach(item => {
-        let article = document.createElement("LI");
-        let price = document.createElement('SPAN');
-        let ref = document.createElement('P');
-        ref.innerHTML = 'ref: ' + item.ref;
-        price.innerHTML = item.price + '$';
-        article.innerHTML += item.name;
+      let tr = document.createElement('TR');
+      let name = document.createElement('TD')
+      let price = document.createElement('TD');
+      let numb = document.createElement('INPUT');
+      numb.type = 'number';
+      numb.setAttribute('min', '1');
+      numb.setAttribute('max', '9');
 
-        article.appendChild(ref);
-        article.appendChild(price);
-        article.classList.add('list-group-item');
-        article.classList.add('d-flex');
-        article.classList.add('justify-content-between');
-        
-        modal.appendChild(article)
-    });
+      let qt = document.createElement('TD');
+      let ref = document.createElement('TD');
+      let suppr = document.createElement('TD');
+      let cross = document.createElement('I');
+      name.classList += 'col-3';
+      ref.classList += 'col-2';
+      qt.classList += 'col-2';
+      price.classList += 'col-2';
+      suppr.classList += 'col-1';
+      ref.innerText = item.ref;
+      price.innerText = item.price + '$';
+      name.innerText = item.name;
+      tr.setAttribute('id', item.id);
+      qt.innerText = item.quantity;
+      cross.className += "close bi bi-x-square-fill";
+
+      qt.appendChild(numb); 
+      tr.appendChild(name); 
+      tr.appendChild(ref); 
+      tr.appendChild(qt);
+      tr.appendChild(price);
+      suppr.appendChild(cross);
+      cross.setAttribute('onClick', `removeFromBasket('${item.id}')`);
+      tr.appendChild(suppr);
+      tbody.appendChild(tr);
+      tbody.appendChild(tr);
+  });
+  calcTotal();
 }
+
 
 // on parcours tout les bouttons acheter pour leur mettre
 // un écouteur d'event
