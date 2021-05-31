@@ -1,7 +1,9 @@
 const basketArticles = [];
+let obj = [];
+let url = 'js/products.json';
 
 let buttons = document.querySelectorAll('a.addCard');
-console.log(buttons);
+
 buttons.forEach(item => {
     item.addEventListener('click', () => {
         
@@ -17,10 +19,7 @@ buttons.forEach(item => {
           addToBasket(obj[index]);
         }
     })
- })
-
-let url = 'js/products.json';
-let obj = [];
+});
 
 fetch(url)
     .then(res => res.json())
@@ -34,21 +33,35 @@ function addToBasket(item){
 }
 
 function removeFromBasket(id){
-  console.log('delete');
     let index = basketArticles.findIndex(x => x.id === id);
     basketArticles.splice(index, 1);
     let elem = document.getElementById(id);
     elem.innerHTML = '';
     elem.remove();
+    calcTotal();
 }
 
 function calcTotal(){
   let total = 0;
-  basketArticles.forEach(item => {
-    total += (item.price * item.quantity);
-  })
+  if(basketArticles.length > 0){
+    basketArticles.forEach(item => {
+      total += (item.price * item.quantity);
+    });
+  }
+  
   document.getElementById('totalPrice').textContent = total;
 } 
+
+function updateQuantity(id, number){
+  let index = basketArticles.findIndex(x => x.id == id);
+  if(number == -1 && basketArticles[index].quantity == 0){
+    console.log('oui');
+  } else {
+    basketArticles[index].quantity += number;
+    displayBasket();
+  }
+}
+
 
 // fonction qui réaffiche entièrement le panier 
 // appelée dès qu'une modification sur panier est effectuée 
@@ -59,17 +72,14 @@ function displayBasket () {
 
     basketArticles.forEach(item => {
       let tr = document.createElement('TR');
-      let name = document.createElement('TD')
+      let name = document.createElement('TD');
       let price = document.createElement('TD');
-      let numb = document.createElement('INPUT');
-      numb.type = 'number';
-      numb.setAttribute('min', '1');
-      numb.setAttribute('max', '9');
-
       let qt = document.createElement('TD');
       let ref = document.createElement('TD');
       let suppr = document.createElement('TD');
       let cross = document.createElement('I');
+      let plus = document.createElement('I');
+      let less = document.createElement('I');
       name.classList += 'col-3';
       ref.classList += 'col-2';
       qt.classList += 'col-2';
@@ -81,14 +91,19 @@ function displayBasket () {
       tr.setAttribute('id', item.id);
       qt.innerText = item.quantity;
       cross.className += "close bi bi-x-square-fill";
+      plus.className += "plus bi bi-plus-square-fill";
+      less.className += "less bi bi-dash-square-fill";
 
-      qt.appendChild(numb); 
       tr.appendChild(name); 
       tr.appendChild(ref); 
       tr.appendChild(qt);
       tr.appendChild(price);
+      suppr.appendChild(less);
+      suppr.appendChild(plus);
       suppr.appendChild(cross);
       cross.setAttribute('onClick', `removeFromBasket('${item.id}')`);
+      plus.setAttribute('onClick', `updateQuantity(${item.id}, 1)`);
+      less.setAttribute('onClick', `updateQuantity(${item.id}, -1)`);
       tr.appendChild(suppr);
       tbody.appendChild(tr);
       tbody.appendChild(tr);

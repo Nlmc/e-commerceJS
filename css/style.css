@@ -24,7 +24,7 @@ h1 {
 .bg-first-color {
     background-color:#08448f;
 } 
-
+.less:hover, .plus:hover,
 .close:hover {
     cursor: pointer;
     opacity: 0.6;
