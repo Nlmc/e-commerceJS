@@ -1,0 +1,450 @@
+/* ===================================================================
+	±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+	## CSS ##
+	2020-2021 © Achraf + Louis + Cristina
+	https://www.achrafreda.fr
+		https://codepen.io/hraf
+		https://github.com/hrafdigit
+	made w/ ¶ from Paris (France) [at] La Manu – Ecole des métiers du digital
+		https://lamanu.fr/
+	±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+	================================================================== */
+
+
+/* ====================================
+	START IMPORTS RESET & NORMALIZE <<<
+   ============================================== */
+	/*
+	*/
+/* ==============================================
+	>>> END IMPORTS RESET & NORMALIZE
+   ================================== */
+
+
+/* ====================================
+	START IMPORTS LIBS & FRAMEWORKS <<<
+   ============================================== */
+   /*
+   @import "css/fontawesome/fontawesome-all.min.css";
+	*/
+/* ==============================================
+	>>> END IMPORTS LIBS & FRAMEWORKS
+   ================================== */
+
+
+/* ========================
+	START IMPORTS FONTS <<<
+   ============================================== */
+   /*
+   @import "../css/fonts/typo.css";
+	*/
+/* ==============================================
+	>>> END IMPORTS FONTS
+   ====================== */
+
+
+/* ===============
+	START GRID <<<
+   ================================================== */
+	/* --- NOTES SUR LA GRILLE | NOTES ABOUT GRID --- */
+	/* ----------------------------------------------
+		Columns :			21
+		Grid Width :		1140px
+		Grid Margin :		3px
+		Column Width :		40px
+		Column Padding :	7px x2
+		Gutter Width :		14px
+	------------------------------ */
+	/* --------------------------- 
+		Columns :			21
+		Grid Width :		1140px
+		Grid Margin :		3px
+		Column Width :		40px
+		Column Padding :	7px x2
+		Gutter Width :		14px
+	------------------------------ */
+/* ==============================================
+	>>> END GRID
+   ============= */
+
+
+/* =================
+	START BASICS <<<
+   ============================================== */
+/* ==============================================
+	>>> END BASICS
+   =============== */
+
+
+
+/* ===========================
+	>>> START CURSTOM <<<
+   ============================================== */
+/* ==============================
+	--- POSITIONNEMENT GLOBAL ---
+   ============================================== */
+
+   /*
+	*/
+
+/* ==============================
+/* --- STYLES DE TEXTE GLOBAL ---
+/* ============================================== */
+
+/* == Corps du texte */
+
+/* == Titres */
+/* h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 .5em 0;
+}
+h1, h2 {
+	font-weight: 400;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.2em;
+}
+h4 {
+	font-size: 1em;
+} */
+
+
+/* =================
+/* --- COULEURS ---
+/* ============================================== */
+/* == Prinicpal == */
+/*
+body {
+	color: #3F4444;
+}
+a, a:visited {
+	color: #893f00;
+	cursor:pointer;
+}
+a:hover, a:focus {
+	color: #8d0000;
+	cursor:pointer;
+}
+a img, a:hover img, a:active img {background-color:none;}
+*/
+
+
+/* ===============
+	--- HEADER ---
+   ============================================== */
+
+header {
+	height: 64px;
+	/*display: flex;*/
+	/*flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;*/
+	/*align-items: start;
+	align-content: start;*/
+	background-color: #f2f2f2;
+}
+nav > .container {
+	height: 48px;
+}
+a.navbar-brand {
+	width: 32px;
+	height: 32px;
+	font-size: 0px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 27.33 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff;%7D.cls-2%7Bfill:none;%7D.cls-3%7Bclip-path:url(%23clip-path);%7D.cls-4%7Bmask:url(%23mask);%7D.cls-5,.cls-6%7Bfill:%23424b5a;%7D.cls-6%7Bopacity:0;%7D.cls-7%7Bfill:%23e6e6e6;%7D.cls-8%7Bfill:%23b3b3b3;%7D.cls-9%7Bfill:%23999;%7D%3C/style%3E%3CclipPath id='clip-path' transform='translate(-2.33)'%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/clipPath%3E%3Cmask id='mask' x='0' y='0' width='27.33' height='32' maskUnits='userSpaceOnUse'%3E%3Cg transform='translate(-2.33)'%3E%3Crect class='cls-1' x='2.33' width='27.33' height='32'/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Cg id='Calque_2' data-name='Calque 2'%3E%3Cg id='header-items'%3E%3Cg class='cls-3'%3E%3Cg class='cls-4'%3E%3Cpath class='cls-5' d='M18.64.19V.67a.67.67,0,0,1-.67.66H14A.67.67,0,0,1,13.3.67V.2c-4,.49-11.06,2.23-11,8.36C2.47,17.11,9.61,32,16,32S29.53,17.11,29.67,8.56C29.76,2.39,22.63.67,18.64.19Z' transform='translate(-2.33)'/%3E%3Cpath class='cls-6' d='M14,1.33h4a.67.67,0,0,0,.67-.66V.19A24.18,24.18,0,0,0,16,0a24,24,0,0,0-2.7.2V.67A.67.67,0,0,0,14,1.33Z' transform='translate(-2.33)'/%3E%3C/g%3E%3Crect class='cls-7' x='10.3' y='24' width='6.67' height='1.33' rx='0.67'/%3E%3Crect class='cls-7' x='10.97' y='24.67' width='5.33' height='1.33' rx='0.67'/%3E%3Ccircle class='cls-7' cx='13.67' cy='10.53' r='6'/%3E%3Cpath class='cls-7' d='M16,18.7a8.17,8.17,0,1,1,8.17-8.17A8.18,8.18,0,0,1,16,18.7Zm0-16a7.84,7.84,0,1,0,7.83,7.83A7.84,7.84,0,0,0,16,2.7Z' transform='translate(-2.33)'/%3E%3Cpath class='cls-7' d='M16,17.68a7.15,7.15,0,1,1,7.15-7.15A7.16,7.16,0,0,1,16,17.68Zm0-14a6.86,6.86,0,1,0,6.85,6.85A6.85,6.85,0,0,0,16,3.68Z' transform='translate(-2.33)'/%3E%3Cpath class='cls-8' d='M16,6.49a6,6,0,0,0-5.92,5,6.27,6.27,0,0,1-.08-1,6,6,0,1,1,12,0,6.27,6.27,0,0,1-.08,1A6,6,0,0,0,16,6.49Z' transform='translate(-2.33)'/%3E%3Crect class='cls-9' x='13.5' y='1.39' width='0.33' height='23.33'/%3E%3Crect class='cls-9' x='12.17' y='1.39' width='0.33' height='23.33'/%3E%3Crect class='cls-9' x='14.83' y='1.39' width='0.33' height='23.33'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+}
+
+
+/* =====================
+	--- HERO CONTENT ---
+   ============================================== */
+
+.jumbotron {
+	height: 256px;
+	margin: 40px 0 0 0;
+	background-color: red;
+}
+
+
+/* =====================
+	--- MAIN CONTENT ---
+   ============================================== */
+
+#guitares {
+	height: 576px;
+	max-height: 576px;
+	margin: 48px auto 0;
+	background-color: green;
+}
+
+#basses {
+	height: 576px;
+	max-height: 576px;
+	margin: 48px auto 0;
+	background-color: yellow;
+}
+
+#ukeleles {
+	height: 576px;
+	max-height: 576px;
+	margin: 48px auto 0;
+	background-color: blue;
+}
+
+#nos-videos {
+	height: 256px;
+	max-height: 256px;
+	margin: 48px auto 0;
+	background-color: khaki;
+}
+
+#tests {
+	height: 256px;
+	max-height: 256px;
+	margin: 48px auto 0;
+	background-color: turquoise;
+}
+
+#avis-clients {
+	height: 256px;
+	max-height: 576px;
+	margin: 48px auto 0;
+	background-color: indianred;
+}
+
+#nous-contacter {
+	height: 576px;
+	max-height: 576px;
+	margin: 48px auto 0;
+	background-color: navajowhite;
+}
+
+#reassurance {
+	height: 576px;
+	max-height: 576px;
+	margin: 48px auto 0;
+	background-color: palegreen;
+}
+
+footer {
+	height: 128px;
+	max-height: 128px;
+	margin: 48px auto 0;
+	background-color: magenta;
+}
+
+/* ==============
+/*  *** FONTS ***
+/* ============================================== */
+
+/* https://fonts.google.com */
+/* ===============
+/*	START Open Sans <<<
+/* ============================================== */
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-Light.eot');
+	src: url('../../../assets/fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-Light.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-Light.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-Light.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSansLight-Italic.eot');
+	src: url('../../../assets/fonts/OpenSansLight-Italic.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSansLight-Italic.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSansLight-Italic.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSansLight-Italic.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSansLight-Italic.svg') format('svg');
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans.eot');
+	src: url('../../../assets/fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-Italic.eot');
+	src: url('../../../assets/fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-Italic.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-Italic.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-Italic.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-Italic.svg') format('svg');
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-Semibold.eot');
+	src: url('../../../assets/fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-Semibold.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-Semibold.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-Semibold.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-Semibold.svg') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-SemiboldItalic.eot');
+	src: url('../../../assets/fonts/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-SemiboldItalic.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-SemiboldItalic.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-SemiboldItalic.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-SemiboldItalic.svg') format('svg');
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-Bold.eot');
+	src: url('../../../assets/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-Bold.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-Bold.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-BoldItalic.eot');
+	src: url('../../../assets/fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-BoldItalic.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-BoldItalic.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-BoldItalic.svg') format('svg');
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-Extrabold.eot');
+	src: url('../../../assets/fonts/OpenSans-Extrabold.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-Extrabold.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-Extrabold.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-Extrabold.ttf') format('truetype'),
+		 url('../../../assets/fonts/OpenSans-Extrabold.svg') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../../assets/fonts/OpenSans-ExtraboldItalic.eot');
+	src: url('../../../assets/fonts/OpenSans-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
+		 url('../../../assets/fonts/OpenSans-ExtraboldItalic.woff') format('woff'),
+		 url('../../../assets/fonts/OpenSans-ExtraboldItalic.woff2') format('woff2'),
+		 url('../../../assets/fonts/OpenSans-ExtraboldItalic.ttf') format('truetype'),
+		url('../../../assets/fonts/OpenSans-ExtraboldItalic.svg') format('svg');
+	font-weight: 800;
+	font-style: italic;
+}
+/* ==============================================
+	>>> END Open Sans
+   =================== */
+   
+/* ===============
+/*	START Titillium Web <<<
+/* ============================================== */
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-extralight.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-extralight.woff2') format('woff2');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-extralightitalic.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-extralightitalic.woff2') format('woff2');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-light.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-lightitalic.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-lightitalic.woff2') format('woff2');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-regular.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-regular.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-semibold.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-semibold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-semibolditalic.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-semibolditalic.woff2') format('woff2');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-bold.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-bolditalic.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-bolditalic.woff2') format('woff2');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Titillium Web', sans-serif;
+	src: url('../../../assets/fonts/titilliumweb/titilliumweb-black.woff') format('woff'),
+		 url('../../../assets/fonts/titilliumweb/titilliumweb-black.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+}
+/* ==============================================
+/*  >>> END Titillium Web
+   ======================= */

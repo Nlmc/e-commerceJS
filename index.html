@@ -20,57 +20,106 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
 
     <!-- google fonts  -->
-    <!-- style du site  -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <title>eMusic</title>
 
+    <!-- custom styles  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>eMusic</title>
 </head>
 
 <body>
     <!-- header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">logo</a></li>
-                <li><a href="#">guitares</a></li>
-                <li><a href="#">basses</a></li>
-                <li><a href="#">ukelele</a></li>
-                <li><a href="#">panier</a></li>
-            </ul>
+    <header class="navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a title="Page d'accueil" class="navbar-brand" href="index.html">guitarz
+                    <!-- <img class="logo" src="#" title="logo Guitarz" alt="logo de Guitarz, magasin de musique d'instruments à cordes pincées"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a id="nav-all" class="nav-link" href="#" role="button" aria-expanded="false">accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-guitares" class="nav-link" href="#"  role="button" aria-expanded="false">guitares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-basses" class="nav-link" href="#" role="button" aria-expanded="false">basses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-ukeleles" class="nav-link" href="#" role="button" aria-expanded="false">ukélélés</a>
+                        </li> 
+                        <!-- Button trigger modal -->
+                        <!-- <li class="nav-item">
+                            <a data-bs-toggle="modal" data-bs-target="#pannierModal" class="nav-link" href="#" title="Panier"><i class="bi bi-cart-dash"></i></a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="container">
-        <section id="guitares">toutes les guitares</section>
-        <hr />
-        <section id="guitares">toutes les basses</section>
-        <hr />
-        <section id="guitares">toutes les ukelélés</section>
-        <hr />
+    <main>
+    <!-- START Hero -->
+    <section class="jumbotron">
+        <strong class="covid-infos"></strong>
+        <div class="hero"></div>
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </section>
+    <!-- END Hero -->
+
+        <!-- START Products -->
+        <!-- BEGIN Section Guitares -->
+        <section id="guitares" class="container">
+            <h2 class="first-color text-center p-3">Les guitares</h2>
+        </section>
+        <!-- BEGIN Section Basses -->
+        <section id="basses" class="container">
+            <h2 class="first-color text-center p-3">Les basses</h2>
+        </section>
+        <!-- BEGIN Section Ukelélés -->
+        <section id="ukeleles" class="container">
+            <h2 class="first-color text-center p-3">Les Ukélélés</h2>
+        </section>
+        <!-- END Products -->
+
+        <!-- START Vidéos -->
+        <section id="nos-videos" class="container">Nos vidéos</section>
+        <!-- END Vidéos -->
+
+        <!-- START Vidéos -->
+        <section id="tests" class="container">Tests</section>
+        <!-- END Vidéos -->
+
+        <!-- START Vidéos -->
+        <section id="avis-clients" class="container">Nos vidéos</section>
+        <!-- END Vidéos -->
+
+        <!-- START Vidéos -->
+        <section id="nous-contacter" class="container">Nos vidéos</section>
+        <!-- END Vidéos -->
+
         <!-- == BS Cards + pushJS/json == -->
-        <!-- START BS Cards wrapper -->
-        <div class="card" id="card-001" style="width: 18rem;">
-            <img src="#" class="card-img-top" alt="">
-            <!-- BEGIN Cards BS body -->
+        <!-- card test -->
+        <div class="card" id="card-2" style="width: 18rem;">
+            <img src="assets/img/guitar-02-blanche.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Fender - Stratocaster</h5>
-                <p class="card-cat"></p>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <p class="card-price"></p>
-                <strong>1550</strong>
-                <!-- <span>€</span> -->
-                </p>
-                <p class="small"></p>
-                <span>réf. | </span>
-                <span>40938746</span>
-                </p>
-                <!-- <button><a href="#" class="btn btn-primary" data-id="001">Ajouter au panier</a></button> -->
-                <a href="#" class="btn btn-primary addCard" data-id="001">Ajouter au panier</a>
+              <h5 class="card-title">Gibson - explorer</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p><span class="price">3000</span>$</p>
+                <p>Réf: <span class="ref">388849</span></p>
+              <a class="btn btn-primary addCard" data-id="002">Ajouter au panier</a>
             </div>
-            <!-- END Cards BS body -->
         </div>
-        <!-- END BS Cards wrapper -->
+
     </main>
 
     <footer class=" text-center bg-first-color">

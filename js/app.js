@@ -1,50 +1,116 @@
-// function loadFile() {
-//     var fileReader;
+const basketArticles = [];
 
-//     if (typeof window.FileReader !== 'function') {
-//         alert("The file API isn't supported on this browser yet.");
-//         return;
-//     }
-//     else {
-//         fileReader = new FileReader();
-//         fileReader.onload = receivedText;
-//         fileReader.readAsText(file);
-//     }
+let buttons = document.querySelectorAll('a.addCard');
+    console.log(buttons);
+buttons.forEach(item => {
+    item.addEventListener('click', () => {
+         let itemId = item.getAttribute('data-id');
+         if (basketArticles.some(elem => elem.id == itemId)) {
+             let index = basketArticles.findIndex(x => x.id === itemId);
+             basketArticles[index].quantity += 1;
+             console.log('l\'article existe déjà dans le panier');
+         } else {
+             let index = obj.findIndex(x => x.id === itemId);
+             console.log(obj[index]);
+             addToBasket(obj[index]);
+         }
+    })
+ })
 
-//     function receivedText(e) {
-//         let lines = e.target.result;
-//         var newArr = JSON.parse(lines);
-//     }
-// }
-// window.onload = loadFile();
+let url = 'products.json';
+let obj = [];
 
+fetch(url, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'dataType': 'json'
+    },
+    mode: 'no-cors',
+    cache: 'default'
+})
+.then(res => res.json())
+.then(out => obj = out)
+.then(() => showInstruments()
+    // console.log(obj)
+).catch(err => { throw err });
 
-// const MY_JSON_FILE = [{ "hello": "world" }];
-// let json = JSON.stringify(MY_JSON_FILE);
-// const blob = new Blob([json], { type: "application/json" });
-// const fr = new FileReader();
-// fr.addEventListener("load", e => {
-//     console.log(e.target.result, JSON.parse(fr.result))
-// });
-// fr.readAsText(blob);
+// fetch(url)
+//     .then(res => res.json())
+//     .then(out => obj = out)
+//     .then(() => console.log(obj)).catch(err => { throw err });
 
-function loadJSON(callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'products.json', true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-        }
-    };
-    xobj.send(null);
+function addToBasket(item){
+    item.quantity = 1;
+    basketArticles.push(item);
+    displayBasket();
 }
-function init() {
-    loadJSON(function (response) {
-        // Parse JSON string into object
-        var actual_JSON = JSON.parse(response);
-        console.log(actual_JSON);
-    });
+
+function removeFromBasket(id){
+    let index = basketArticles.findIndex(x => x.id === id);
+    basketArticles.splice(index, 1);
+    displayBasket();
+
 }
-window.onload = init();
+
+function showInstruments() {
+
+    let products = obj;
+    for (var i = 0; i < products.length; i++) {
+
+        let card = document.createElement('div');
+        let cardImgTop = document.createElement('img');
+        let cardBody = document.createElement('div');
+        let cardTitle = document.createElement('h5');
+        let cardText = document.createElement('p');
+        let wrapperPrice = document.createElement('p');
+        let price = document.createElement('span');
+        let wrapperRef = document.createElement('p');
+        let ref = document.createElement('span');
+        let addCardBtn = document.createElement('a');
+
+        cardTitle.textContent = products[i].name;
+        cardTitle.textContent = products[i].img;
+        cardText.textContent = products[i].desc;
+        price.textContent = products[i].price;
+        ref.textContent = products[i].ref;
+
+        card.appendChild(cardImgTop);
+        card.appendChild(cardBody);
+        card.appendChild(cardTitle);
+        card.appendChild(cardText);
+        card.appendChild(wrapperPrice);
+        card.appendChild(price);
+        card.appendChild(wrapperRef);
+        card.appendChild(ref);
+        card.appendChild(addCardBtn);
+
+        allGuitares = document.getElementById('guitares');
+        allBasses = document.getElementById('basses');
+        allUkuleles = document.getElementById('ukuleles');
+        
+        allGuitares.appendChild(card);
+    }
+}
+
+
+        // var myArticle = document.createElement('article');
+        // var myH2 = document.createElement('h2');
+        // var myPara1 = document.createElement('p');
+        // var myPara2 = document.createElement('p');
+        // var myPara3 = document.createElement('p');
+        // var myList = document.createElement('ul');
+
+        // myH2.textContent = heroes[i].name;
+        // myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
+        // myPara2.textContent = 'Age: ' + heroes[i].age;
+        // myPara3.textContent = 'Superpowers:';
+
+        // var superPowers = heroes[i].powers;
+        // for (var j = 0; j < superPowers.length; j++) {
+        //     var listItem = document.createElement('li');
+        //     listItem.textContent = superPowers[j];
+        //     myList.appendChild(listItem);
+        // }
+
