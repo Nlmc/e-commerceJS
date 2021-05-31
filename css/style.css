@@ -25,4 +25,8 @@ h1 {
     background-color:#08448f;
 } 
 
+.close:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
 
