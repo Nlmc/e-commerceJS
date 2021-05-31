@@ -33,3 +33,16 @@ h1 {
 #totalPrice {
     display: contents;
 }
+
+.modal-body {
+    padding:0;
+}
+.modal-body thead th{
+    padding:5px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.modal table tbody td {
+    padding:5px 0;
+    text-align: center;
+}

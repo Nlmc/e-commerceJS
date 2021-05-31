@@ -101,6 +101,16 @@
                       <a class="btn btn-primary addCard" data-id="002">Ajouter au panier</a>
                     </div>
                 </div>
+                <div class="card" id="card-2" style="width: 18rem;">
+                    <img src="assets/img/guitar-02-blanche.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Jaydee SG</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p><span class="price">3000</span>$</p>
+                        <p>Réf: <span class="ref">388849</span></p>
+                      <a class="btn btn-primary addCard" data-id="003">Ajouter au panier</a>
+                    </div>
+                </div>
                
                   <!-- end col + Produit 1 -->
                   
@@ -156,10 +166,10 @@
 
     <!-- Modal panier-->
     <div class="modal fade" id="pannierModal" tabindex="-1" aria-labelledby="pannierModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="pannierModalLabel">Modal title</h5>
+            <div class="modal-header bg-first-color">
+              <h5 class="modal-title text-white" id="pannierModalLabel">Ton pannier</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -178,13 +188,18 @@
                   </tbody>
               </table>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer ">
                 <div class="row">
-                    Prix total:
-                    <span id="totalPrice"></span>$
-                </div>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="col-md-12 text-end fs-3">Prix total:<span id="totalPrice"></span>$</p>
+                    </div> 
+                    <div class="col-md-12 text-end">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                
+                
+                
+                </div> <!-- end row modalfooter-->
             </div>
         </div>
         </div>
