@@ -79,32 +79,5 @@
        "cat":"ukelele",
        "ref": 5442,
        "price":2034
-    },
-    {
-       "id":"22",
-       "img":"dummy-pdt-img.jpg",
-       "name":"Elvis Presley",
-       "desc":"Extraordinaire guitare",
-       "cat":"ukelele",
-       "ref": 5842,
-       "price":1247
-    },
-    {
-       "id":"23",
-       "img":"dummy-pdt-img.jpg",
-       "name":"Gabby Pahinui",
-       "desc":"Balle de guitare",
-       "cat":"ukelele",
-       "ref": 3442,
-       "price":675
-    },
-    {
-       "id":"24",
-       "img":"dummy-pdt-img.jpg",
-       "name":"Fender Telecaster « Micawber »",
-       "desc":"Grosse déchire de guitare",
-       "cat":"ukelele",
-       "ref": 9742,
-       "price":842
     }
  ]

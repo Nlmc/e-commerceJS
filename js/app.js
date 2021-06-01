@@ -2,8 +2,6 @@ const basketArticles = []; //Panier
 let obj = []; //Tableau qui contiendra le resultat du json
 let url = 'js/products.json';
 
-
-
 fetch(url, {
     method: 'GET',
     headers: {
@@ -29,8 +27,7 @@ fetch(url, {
                 if (basketArticles.some(elem => elem.id == itemId)) {
                     let index = basketArticles.findIndex(x => x.id === itemId);
                     basketArticles[index].quantity += 1;
-                    displayBasket();
-                    console.log('l\'article existe déjà dans le panier');
+                    displayBasket();                    
                 } else {
                     // sinon on l'ajoute
                     let index = obj.findIndex(x => x.id === itemId);
@@ -41,20 +38,13 @@ fetch(url, {
       }
 ).catch(err => { throw err });
 
-
-// on va chercher le json à l'url indiquée puis on le met 
-// dans la variable obj
-// fetch(url)
-//     .then(res => res.json())
-//     .then(out => obj = out)
-//     .then(() => console.log(obj)).catch(err => { throw err });
-
+// ajouter un produit au panier
 function addToBasket(item){
     item.quantity = 1;
     basketArticles.push(item);
     displayBasket();
 }
-
+// supprimer un produit du panier
 function removeFromBasket(id){
     let index = basketArticles.findIndex(x => x.id === id);
     basketArticles.splice(index, 1);
@@ -63,7 +53,7 @@ function removeFromBasket(id){
     elem.remove();
     calcTotal();
 }
-
+// somme des prix des produits
 function calcTotal(){
   let total = 0;
   if(basketArticles.length > 0){
@@ -73,25 +63,20 @@ function calcTotal(){
   }
   document.getElementById('totalPrice').textContent = total;
 } 
-
+// mettre à jour la quantité
 function updateQuantity(id, number){
   let index = basketArticles.findIndex(x => x.id == id);
   if(number == -1 && basketArticles[index].quantity == 0){
-    console.log('oui');
   } else {
     basketArticles[index].quantity += number;
     displayBasket();
   }
 }
-
-
 // fonction qui réaffiche entièrement le panier 
 // appelée dès qu'une modification sur panier est effectuée 
 function displayBasket () {
     let tbody = document.querySelector('.modal-body table tbody');
     tbody.innerHTML = '';
-    console.log('display basket');
-
     basketArticles.forEach(item => {
       let tr = document.createElement('TR');
       let name = document.createElement('TD');
@@ -133,37 +118,24 @@ function displayBasket () {
   calcTotal();
 }
 
-
-
-// code filter
+// code pour filtrer  par categories 
   let blocGuitars = document.getElementById('guitares');
-  let blocBasses = document.getElementById("basses");
-  let blocUkeleles = document.getElementById("ukeleles");
-
   let navGuitars = document.getElementById('nav-guitares');
   let navBasses = document.getElementById('nav-basses');
   let navUkeleles = document.getElementById('nav-ukeleles');
   let navAll = document.getElementById('nav-all');
-  
+
   navGuitars.addEventListener('click',function(){
-    blocGuitars.style.display = "block";
-    blocBasses.style.display = "none";
-    blocUkeleles.style.display = "none";
+    document.getElementById("guitares").classList="row onlyGuitars";   
   });
   navBasses.addEventListener('click',function(){
-    blocGuitars.style.display = "none";
-    blocBasses.style.display = "block";
-    blocUkeleles.style.display = "none";
+    document.getElementById("guitares").classList="row onlyBasses";
   });
   navUkeleles.addEventListener('click',function(){
-    blocGuitars.style.display = "none";
-    blocBasses.style.display = "none";
-    blocUkeleles.style.display = "block";
+    document.getElementById("guitares").classList="row onlyUkeleles";   
   });
   navAll.addEventListener('click',function(){
-    blocGuitars.style.display = "block";
-    blocBasses.style.display = "block";
-    blocUkeleles.style.display = "block";
+    document.getElementById("guitares").classList="row onlyAll";   
   });
 
 // Add active class to the current button (highlight it)
@@ -177,7 +149,7 @@ for (var i = 0; i < navitems.length; i++) {
   });
 }
 
-
+// affichages des produits à partir du json
 function showInstruments() {
 
     let products = obj;
@@ -197,7 +169,7 @@ function showInstruments() {
         cardTitle.textContent = products[i].name;
         cardImgTop.src = ('assets/img/' + products[i].img);
         cardText.textContent = products[i].desc;
-        price.textContent = products[i].price;
+        price.textContent = products[i].price + "€";
         ref.textContent = products[i].ref;
         addCardBtn.textContent = 'Ajouter au panier';
         addCardBtn.setAttribute('data-id', products[i].id)
@@ -222,10 +194,6 @@ function showInstruments() {
         card.appendChild(addCardBtn);
 
         allGuitares = document.getElementById('guitares');
-        allBasses = document.getElementById('basses');
-        allUkuleles = document.getElementById('ukuleles');
-
         allGuitares.appendChild(card);
-
     }
 }

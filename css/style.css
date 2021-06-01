@@ -66,4 +66,31 @@ table tbody td i {
 .active {
     background-color: #ddd;    
 }
+.card {
+    text-align: center;
+}
+.card .btn-primary {
+    display: block;
+    padding-top: 15px;
+}
+.card-text {
+    font-size:17px;   
+}
+.card .price {
+    font-size: 28px;  
+}
+.card .ref { display: none;}
+.onlyGuitars div:nth-child(1), .onlyGuitars div:nth-child(2), .onlyGuitars div:nth-child(3),
+.onlyBasses div:nth-child(4), .onlyBasses div:nth-child(5), .onlyBasses div:nth-child(6),
+.onlyUkeleles div:nth-child(7), .onlyUkeleles div:nth-child(8), .onlyUkeleles div:nth-child(9)
+ {
+   display:block;
+}
+.onlyGuitars div:nth-child(4), .onlyGuitars div:nth-child(5), .onlyGuitars div:nth-child(6), .onlyGuitars div:nth-child(7), .onlyGuitars div:nth-child(8), .onlyGuitars div:nth-child(9),
+.onlyBasses div:nth-child(1), .onlyBasses div:nth-child(2), .onlyBasses div:nth-child(3), .onlyBasses div:nth-child(7), .onlyBasses div:nth-child(8), .onlyBasses div:nth-child(9),
+.onlyUkeleles div:nth-child(1), .onlyUkeleles div:nth-child(2), .onlyUkeleles div:nth-child(3), .onlyUkeleles div:nth-child(4), .onlyUkeleles div:nth-child(5), .onlyUkeleles div:nth-child(6)
+{
+    display:none;
+ }
+
 

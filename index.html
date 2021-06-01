@@ -83,92 +83,16 @@
             <h1 class="text-white text-center">Les meilleurs instruments de musique sont chez nous</h1>
         </div>
         <!-- bloc guitares -->
-        <div id="guitares" class="container-fluid guitares">
-            <h2 class="first-color text-center p-3">Les guitares</h2>
+        <div  class="container-fluid guitares">
+            <h2 id="titleAll" class="first-color text-center p-3 visible">Nos instruments</h2>
+            
+
             <div class="container">
-                <div class="row justify-content-start">
-                  <!-- Produit 1 -->
-                  <!-- <div class="col-md-4">                                      
-                    <div class="card" >
-                        <img src="assets/img/guitar-01-classique.jpg" class="card-img-top img-fluid" alt="Guitar classique">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary text-center">Ajouter au panier</a> <a href="#" class="btn btn-primary text-center">Acheter</a>
-                        </div>
-                      </div>                   
-                  </div> -->
-                  <div class="card" id="card-2" style="width: 18rem;">
-                    <img src="assets/img/guitar-02-blanche.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Gibson - explorer</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p><span class="price">3000</span>$</p>
-                        <p>Réf: <span class="ref">388849</span></p>
-                      <a class="btn btn-primary addCard" data-id="2">Ajouter au panier</a>
-                    </div>
-                </div>
-                <div class="card" id="card-2" style="width: 18rem;">
-                    <img src="assets/img/guitar-02-blanche.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Jaydee SG</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <p><span class="price">3000</span>$</p>
-                        <p>Réf: <span class="ref">388849</span></p>
-                      <a class="btn btn-primary addCard" data-id="3">Ajouter au panier</a>
-                    </div>
-                </div>
-               
-                  <!-- end col + Produit 1 -->
-                  
-                </div>
-            </div>      
+                <div id="guitares" class="row onlyAll">
+                </div> <!-- end guitars-->                                        
+            </div> <!--end container-->     
         </div><!-- end bloc guitares -->
-      
-
-        <!-- bloc basses -->
-        <div id="basses" class="container-fluid basses">
-            <h2 class="first-color text-center p-3">Les basses</h2>
-            <div class="container">
-                <div class="row justify-content-start">
-                  <!-- Produit 1 -->
-                  <div class="col-md-4">                                      
-                    <div class="card" >
-                        <img src="assets/img/guitar-01-classique.jpg" class="card-img-top img-fluid" alt="Guitar classique">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary text-center">Ajouter au panier</a> <a href="#" class="btn btn-primary text-center">Acheter</a>
-                        </div>
-                      </div>                   
-                  </div><!-- end col + Produit 1 -->
-                  
-                </div>
-            </div>      
-        </div><!-- end bloc basses -->
-
-
-        <!-- bloc ukeleles -->
-        <div id="ukeleles" class="container-fluid ukeleles">
-            <h2 class="first-color text-center p-3">Les Ukélélés</h2>
-            <div class="container">
-                <div class="row justify-content-start">
-                  <!-- Produit 1 -->
-                  <div class="col-md-4">                                      
-                    <div class="card" >
-                        <img src="assets/img/guitar-01-classique.jpg" class="card-img-top img-fluid" alt="Guitar classique">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary text-center">Ajouter au panier</a> <a href="#" class="btn btn-primary text-center">Acheter</a>
-                        </div>
-                      </div>                   
-                  </div><!-- end col + Produit 1 -->
-                  
-                </div>
-            </div>      
-        </div><!-- end bloc ukeleles -->
-
+        
     </main><!-- end main -->
 
     <!-- Modal panier-->
@@ -176,7 +100,7 @@
         <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header bg-first-color">
-              <h5 class="modal-title text-white" id="pannierModalLabel">Ton pannier</h5>
+              <h5 class="modal-title text-white" id="pannierModalLabel">Ton panier</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
