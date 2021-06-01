@@ -24,5 +24,46 @@ h1 {
 .bg-first-color {
     background-color:#08448f;
 } 
+.less:hover, .plus:hover,
+.close:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
 
+#totalPrice {
+    display: contents;
+}
+
+.modal-body {
+    padding:0;
+}
+.modal-body thead th{
+    padding:5px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.modal table tbody td {
+    padding:5px 0;
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+table tbody td i {
+    margin: 0 0.2rem;
+}
+.btn-pannier {
+    border:1px solid #ddd;
+    padding:2px 10px;
+}
+.btn-pannier:hover, .nav-item:hover {
+    background-color:#08448f;
+    color:#fff;
+}
+ .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .active:hover {
+    color:#fff;background-color:#08448f;
+}
+.active {
+    background-color: #ddd;    
+}
 
