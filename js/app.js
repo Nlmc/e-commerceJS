@@ -179,7 +179,7 @@ function showInstruments() {
         cardTitle.textContent = products[i].name;
         cardImgTop.src = ('assets/img/' + products[i].img);
         cardText.textContent = products[i].desc;
-        price.textContent = products[i].price + "€";
+        price.textContent = products[i].price + "$";
         ref.textContent = products[i].ref;
         addCardBtn.textContent = 'Ajouter au panier';
         addCardBtn.setAttribute('data-id', products[i].id)
