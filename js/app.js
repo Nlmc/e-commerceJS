@@ -127,16 +127,20 @@ function displayBasket() {
   let navAll = document.getElementById('nav-all');
 
   navGuitars.addEventListener('click',function(){
-    document.getElementById("guitares").classList="row onlyGuitars";   
+    document.getElementById("guitares").classList="row onlyGuitars"; 
+    document.getElementById("titleAll").innerHTML="Les guitares";  
   });
   navBasses.addEventListener('click',function(){
     document.getElementById("guitares").classList="row onlyBasses";
+    document.getElementById("titleAll").innerHTML="Les basses"; 
   });
   navUkeleles.addEventListener('click',function(){
-    document.getElementById("guitares").classList="row onlyUkeleles";   
+    document.getElementById("guitares").classList="row onlyUkeleles"; 
+    document.getElementById("titleAll").innerHTML="Les Ukélélés";   
   });
   navAll.addEventListener('click',function(){
-    document.getElementById("guitares").classList="row onlyAll";   
+    document.getElementById("guitares").classList="row onlyAll";
+    document.getElementById("titleAll").innerHTML="Nos instruments";    
   });
 
 // Add active class to the current button (highlight it)
