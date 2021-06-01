@@ -38,14 +38,15 @@ fetch(url, {
       }
 ).catch(err => { throw err });
 
-// ajouter un produit au panier
-function addToBasket(item){
+// ajouter un produit au panier  
+function addToBasket(item) { 
     item.quantity = 1;
     basketArticles.push(item);
     displayBasket();
 }
+
 // supprimer un produit du panier
-function removeFromBasket(id){
+function removeFromBasket(id) {
     let index = basketArticles.findIndex(x => x.id === id);
     basketArticles.splice(index, 1);
     let elem = document.getElementById(id);
@@ -74,48 +75,48 @@ function updateQuantity(id, number){
 }
 // fonction qui réaffiche entièrement le panier 
 // appelée dès qu'une modification sur panier est effectuée 
-function displayBasket () {
+function displayBasket() {
     let tbody = document.querySelector('.modal-body table tbody');
     tbody.innerHTML = '';
     basketArticles.forEach(item => {
-      let tr = document.createElement('TR');
-      let name = document.createElement('TD');
-      let price = document.createElement('TD');
-      let qt = document.createElement('TD');
-      let ref = document.createElement('TD');
-      let suppr = document.createElement('TD');
-      let cross = document.createElement('I');
-      let plus = document.createElement('I');
-      let less = document.createElement('I');
-      name.classList += 'col-3';
-      ref.classList += 'col-2';
-      qt.classList += 'col-2';
-      price.classList += 'col-2';
-      suppr.classList += 'col-1';
-      ref.innerText = item.ref;
-      price.innerText = item.price + '$';
-      name.innerText = item.name;
-      tr.setAttribute('id', item.id);
-      qt.innerText = item.quantity;
-      cross.className += "close bi bi-x-square-fill";
-      plus.className += "plus bi bi-plus-square-fill";
-      less.className += "less bi bi-dash-square-fill";
+        let tr = document.createElement('TR');
+        let name = document.createElement('TD');
+        let price = document.createElement('TD');
+        let qt = document.createElement('TD');
+        let ref = document.createElement('TD');
+        let suppr = document.createElement('TD');
+        let cross = document.createElement('I');
+        let plus = document.createElement('I');
+        let less = document.createElement('I');
+        name.classList += 'col-3';
+        ref.classList += 'col-2';
+        qt.classList += 'col-2';
+        price.classList += 'col-2';
+        suppr.classList += 'col-1';
+        ref.innerText = item.ref;
+        price.innerText = item.price + '$';
+        name.innerText = item.name;
+        tr.setAttribute('id', item.id);
+        qt.innerText = item.quantity;
+        cross.className += "close bi bi-x-square-fill";
+        plus.className += "plus bi bi-plus-square-fill";
+        less.className += "less bi bi-dash-square-fill";
 
-      tr.appendChild(name); 
-      tr.appendChild(ref); 
-      tr.appendChild(qt);
-      tr.appendChild(price);
-      suppr.appendChild(less);
-      suppr.appendChild(plus);
-      suppr.appendChild(cross);
-      cross.setAttribute('onClick', `removeFromBasket('${item.id}')`);
-      plus.setAttribute('onClick', `updateQuantity(${item.id}, 1)`);
-      less.setAttribute('onClick', `updateQuantity(${item.id}, -1)`);
-      tr.appendChild(suppr);
-      tbody.appendChild(tr);
-      tbody.appendChild(tr);
-  });
-  calcTotal();
+        tr.appendChild(name);
+        tr.appendChild(ref);
+        tr.appendChild(qt);
+        tr.appendChild(price);
+        suppr.appendChild(less);
+        suppr.appendChild(plus);
+        suppr.appendChild(cross);
+        cross.setAttribute('onClick', `removeFromBasket('${item.id}')`);
+        plus.setAttribute('onClick', `updateQuantity(${item.id}, 1)`);
+        less.setAttribute('onClick', `updateQuantity(${item.id}, -1)`);
+        tr.appendChild(suppr);
+        tbody.appendChild(tr);
+        tbody.appendChild(tr);
+    });
+    calcTotal();
 }
 
 // code pour filtrer  par categories 
@@ -142,17 +143,21 @@ function displayBasket () {
 var navbarList = document.getElementById("main-menu");
 var navitems = navbarList.getElementsByClassName("list");
 for (var i = 0; i < navitems.length; i++) {
-  navitems[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
+    navitems[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
 }
 
 // affichages des produits à partir du json
 function showInstruments() {
 
     let products = obj;
+    let allGuitares = document.getElementById('guitares');
+    let allBasses = document.getElementById('basses');
+    let allUkuleles = document.getElementById('ukeleles');
+
     for (var i = 0; i < products.length; i++) {
 
         let card = document.createElement('div');
