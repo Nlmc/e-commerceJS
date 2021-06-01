@@ -3,11 +3,8 @@ const basketArticles = [];
 let buttons = document.querySelectorAll('a.addCard');
 console.log(buttons);
 buttons.forEach(item => {
-    item.addEventListener('click', () => {
-        
+    item.addEventListener('click', () => {        
          let itemId = item.getAttribute('data-id');
-         
- 
          if (basketArticles.some(elem => elem.id == itemId)) {
              let index = basketArticles.findIndex(x => x.id === itemId);
              basketArticles[index].quantity += 1;
@@ -23,10 +20,26 @@ buttons.forEach(item => {
 let url = 'js/products.json';
 let obj = [];
 
-fetch(url)
+fetch(url, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'dataType': 'json'
+    },
+    mode: 'no-cors',
+    cache: 'default'
+})
     .then(res => res.json())
     .then(out => obj = out)
-    .then(() => console.log(obj)).catch(err => { throw err });
+    .then(
+        () => showInstruments()
+    ).catch(err => { throw err });
+
+// fetch(url)
+//     .then(res => res.json())
+//     .then(out => obj = out)
+//     .then(() => console.log(obj)).catch(err => { throw err });
 
 function addToBasket(item){
     item.quantity = 1;
@@ -98,3 +111,55 @@ function displayBasket () {
     blocUkeleles.style.display = "block";
   });
 
+function showInstruments() {
+
+    let products = obj;
+    for (var i = 0; i < products.length; i++) {
+
+        let card = document.createElement('div');
+        let cardImgTop = document.createElement('img');
+        let cardBody = document.createElement('div');
+        let cardTitle = document.createElement('h5');
+        let cardText = document.createElement('p');
+        let wrapperPrice = document.createElement('p');
+        let price = document.createElement('span');
+        let wrapperRef = document.createElement('p');
+        let ref = document.createElement('span');
+        let addCardBtn = document.createElement('a');
+
+        cardTitle.textContent = products[i].name;
+        cardImgTop.src = ('assets/img/' + products[i].img);
+        cardText.textContent = products[i].desc;
+        price.textContent = products[i].price;
+        ref.textContent = products[i].ref;
+        addCardBtn.textContent = 'Ajouter au panier';
+        addCardBtn.setAttribute('data-id', products[i].id)
+
+        card.classList.add('card', 'col-md-4');
+        cardImgTop.classList.add('card-img-top');
+        cardTitle.classList.add('card-body');
+        cardTitle.classList.add('card-title');
+        cardText.classList.add('card-text');
+        price.classList.add('price');
+        ref.classList.add('ref');
+        addCardBtn.classList.add('btn', 'btn-primary', 'addCard');
+
+        card.appendChild(cardImgTop);
+        card.appendChild(cardBody);
+        card.appendChild(cardTitle);
+        card.appendChild(cardText);
+        card.appendChild(wrapperPrice);
+        card.appendChild(price);
+        card.appendChild(wrapperRef);
+        card.appendChild(ref);
+        card.appendChild(addCardBtn);
+
+        allGuitares = document.getElementById('guitares');
+        allBasses = document.getElementById('basses');
+        allUkuleles = document.getElementById('ukuleles');
+
+        // allGuitares.appendChild(card);
+        allGuitares.appendChild(card);
+
+    }
+}
